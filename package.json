@@ -21,18 +21,15 @@
     "scripts": {
         "build": "rm -rf dist && tsc",
         "format": "prettier 'src/**/*.ts' --write -c",
-        "lint": "eslint '{src}/**/*.ts --quiet --fix --cache --cache-location '.cache/.eslintcache'",
+        "lint": "eslint '{src}/**/*.ts' --quiet --fix --cache --cache-location '.cache/.eslintcache'",
         "version:patch": "npm version patch",
         "version:minor": "npm version minor",
         "version:major": "npm version major",
         "publish": "npm publish",
         "prepare": "husky install",
-        "test": ""
+        "test": "jest --cache"
     },
     "peerDependencies": {
-        "rxjs": "^7.5.5"
-    },
-    "dependencies": {
         "rxjs": "^7.5.5"
     },
     "devDependencies": {
@@ -44,14 +41,14 @@
         "eslint": "^8.18.0",
         "eslint-config-prettier": "^8.5.0",
         "eslint-plugin-prettier": "^4.1.0",
+        "husky": "^8.0.1",
         "jest": "28.1.1",
         "prettier": "^2.7.1",
         "ts-jest": "28.0.5",
         "ts-loader": "^9.3.1",
         "ts-node": "^10.8.1",
         "tsconfig-paths": "4.0.0",
-        "typescript": "^4.3.5",
-        "husky": "^8.0.0"
+        "typescript": "^4.3.5"
     },
     "jest": {
         "moduleFileExtensions": [
