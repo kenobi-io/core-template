@@ -15,12 +15,13 @@
         "noFallthroughCasesInSwitch": true,
         "noImplicitAny": true,
         "outDir": "./dist",
-        "rootDir": ".",
         "sourceMap": true,
         "strictNullChecks": true,
         "strictBindCallApply": true,
         "strict": true,
-        "target": "es2020"
+        "target": "es2020",
+        "types": ["node"]
     },
-    "exclude": ["node_modules", "tmp"]
+    "exclude": ["node_modules", "tmp", "src/**/*.spec.ts", "dist"],
+    "include": ["src/**/*.ts"]
 }
