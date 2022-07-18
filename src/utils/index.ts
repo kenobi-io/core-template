@@ -1,2 +1,3 @@
-export * from './first';
-export * from './last';
+export * from './array/index';
+export * from './is/index';
+export * from './specific/index';
