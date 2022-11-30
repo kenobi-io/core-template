@@ -1,3 +1,3 @@
 export * from './array/index';
-export * from './is/index';
+export * from './checking/index';
 export * from './specific/index';
