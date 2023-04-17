@@ -58,7 +58,7 @@ module.exports = {
                 },
             },
         ],
-        '@typescript-eslint/consistent-type-definitions': 'error',
+        '@typescript-eslint/consistent-type-definitions': 'off',
         '@typescript-eslint/interface-name-prefix': 'off',
         '@typescript-eslint/member-delimiter-style': [
             'off',

@@ -2,7 +2,6 @@
     "compileOnSave": false,
     "compilerOptions": {
         "allowSyntheticDefaultImports": true,
-        "baseUrl": ".",
         "declaration": true,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
@@ -20,8 +19,13 @@
         "strictBindCallApply": true,
         "strict": true,
         "target": "es2020",
-        "types": ["jest", "node"]
+        "types": ["jest", "node"],
+        "resolveJsonModule": true,
+        "baseUrl": ".",
+        "paths": {
+            "@fixture": ["src/fixtures/index.ts"]
+        }
     },
-    "exclude": ["node_modules", "tmp", "src/**/*.spec.ts", "dist"],
+    "exclude": ["node_modules", "tmp", "dist"],
     "include": ["src/**/*.ts"]
 }
