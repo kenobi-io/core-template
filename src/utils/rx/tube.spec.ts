@@ -44,7 +44,6 @@ const thenDoAssignOverlayStartXRectWidth = () =>
     });
 
 describe('Tests for tube', <T>() => {
-
     it('should invoke condition in tube', () => {
         const { param, model } = dataTube;
         tube(
@@ -53,55 +52,42 @@ describe('Tests for tube', <T>() => {
             whichModelValueIsNotThe(param),
             thenDoAssignOverlayStartXRectWidth(),
             unary<Model>((model) => expect(model.valueModel.first).toBe('2')),
-            unary<Model>((model) => {expect(model.valueModel.has).toBe(false)}),
+            unary<Model>((model) => {
+                expect(model.valueModel.has).toBe(false);
+            }),
             thenDoAssignOverlayStartXRectWidth(),
-            and(
-                whichModelNameIsThe(param),
-                whichModelNameIsThe(param)
-            ),
+            and(whichModelNameIsThe(param), whichModelNameIsThe(param)),
             thenDoAssignModelValueFirst(),
-            not(
-                whichModelValueIsNotThe(param),
-                whichModelValueIsNotThe(param)
-            ),
+            not(whichModelValueIsNotThe(param), whichModelValueIsNotThe(param)),
             tube(
                 thenDoAssignOverlayStartXRectWidth(),
                 thenDoAssignOverlayStartXRectWidth(),
                 unary<Model>((model) => expect(model.valueModel.first).toBe('2')),
                 unary<Model>((model) => expect(model.valueModel.has).toBe(false)),
                 thenDoAssignOverlayStartXRectWidth(),
-                not(
-                    whichModelValueIsNotThe(param),
-                    whichModelValueIsNotThe(param)
-                ),
+                not(whichModelValueIsNotThe(param), whichModelValueIsNotThe(param)),
                 tube(
                     thenDoAssignOverlayStartXRectWidth(),
                     thenDoAssignOverlayStartXRectWidth(),
                     unary<Model>((model) => expect(model.valueModel.first).toBe('2')),
-                    unary<Model>((model) => expect(model.valueModel.has).toBe(false))
-                )
+                    unary<Model>((model) => expect(model.valueModel.has).toBe(false)),
+                ),
             ),
-            or(
-                whichModelValueIsNotThe(param),
-                whichModelValueIsNotThe(param)
-            ),
+            or(whichModelValueIsNotThe(param), whichModelValueIsNotThe(param)),
             tube(
                 thenDoAssignOverlayStartXRectWidth(),
                 thenDoAssignOverlayStartXRectWidth(),
                 unary<Model>((model) => expect(model.valueModel.first).toBe('2')),
                 unary<Model>((model) => expect(model.valueModel.has).toBe(false)),
                 thenDoAssignOverlayStartXRectWidth(),
-                or(
-                    whichModelValueIsNotThe(param),
-                    whichModelValueIsNotThe(param)
-                ),
+                or(whichModelValueIsNotThe(param), whichModelValueIsNotThe(param)),
                 tube(
                     thenDoAssignOverlayStartXRectWidth(),
                     thenDoAssignOverlayStartXRectWidth(),
                     unary<Model>((model) => expect(model.valueModel.first).toBe('2')),
-                    unary<Model>((model) => expect(model.valueModel.has).toBe(false))
-                )
-            )
+                    unary<Model>((model) => expect(model.valueModel.has).toBe(false)),
+                ),
+            ),
         )(model);
 
         expect(model.valueModel.first).toBe('2');
