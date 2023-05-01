@@ -1,6 +1,6 @@
 {
     "name": "core-template",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "description": "The package is intended for common interfaces and functionality that is shared between the frontend and backend is a library agnostic.",
     "repository": {
         "type": "git",
