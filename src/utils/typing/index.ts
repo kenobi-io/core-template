@@ -1,3 +1,3 @@
 export * from './identity';
 export * from './model';
-export * from './optional';
+export * from './utilities-type';
